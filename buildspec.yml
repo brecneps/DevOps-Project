@@ -1,0 +1,37 @@
+version: 0.2
+
+
+phases:
+  install:
+  
+    commands:
+      - echo "no install commands"
+      
+   
+      
+    
+  pre_build:
+    
+    commands:
+      - echo "no pre-build commands"
+    
+    
+    
+  build:
+    
+    commands:
+      - echo "no build commands"
+     
+    
+  post_build:
+   
+    commands:
+      - echo "no post-build commands"
+     
+    
+
+artifacts:
+  files:
+    - "index.html"
+  
+  
