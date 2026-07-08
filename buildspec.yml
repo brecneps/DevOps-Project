@@ -5,7 +5,7 @@ phases:
   install:
   
     commands:
-      - echo "no install commands"
+      - echo "no install commands neccessary"
       
    
       
@@ -13,20 +13,20 @@ phases:
   pre_build:
     
     commands:
-      - echo "no pre-build commands"
+      - echo "no pre-build commands neccessary"
     
     
     
   build:
     
     commands:
-      - echo "no build commands"
+      - echo "no build commands neccessary"
      
     
   post_build:
    
     commands:
-      - echo "no post-build commands"
+      - echo "no post-build commands neccessary"
      
     
 
