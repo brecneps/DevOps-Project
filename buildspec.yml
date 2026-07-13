@@ -22,11 +22,13 @@ phases:
       - echo "no post-build commands neccessary"
 
 artifacts:
+
   files:
     - "index.html"
     - "buildspec.yml"
     - "README.md"
     - "images/*"
+    - "css/*"
     
   
   
