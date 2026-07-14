@@ -28,7 +28,7 @@ artifacts:
     - "buildspec.yml"
     - "README.md"
     - "images/*"
-    - "css/*"
+    - "style.css"
     
   
   
