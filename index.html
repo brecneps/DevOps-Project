@@ -43,11 +43,11 @@
  <H2>Monitoring and Logging</H2>
  <p>This website is using CloudWatch to monitor alarms that I have configured with certain metrics such as a high request rate alarm for total request reaching over 100 in five minutes indicating a potential DDoS attempt,
      in pair with this is a high error rate alarm, alarming only when 4xxErrors in at least 15 instances exceeds more than 20 errors within 1 hour and 15 minutes.
-     Both are connected to the S3 bucket and held on a dashboard in CloudWatch allowing for monitoring, if these are alarmed I will be sent an email through amazons SNS which then logs this in my email. 
+     Both are connected to the S3 bucket and held on a dashboard in CloudWatch allowing for monitoring, if these are alarmed I will be sent an email through Amazon's SNS which then logs this in my email. 
      This in pair is just an added protection on top of the standard CloudFront has with WAF. 
      Another service I am using is CloudFront which is logging aspects like what devices, browsers, operating systems and locations are requesting this page. These are helpful metrics when troubleshooting on a larger scale website. I am also using a trial of Pingdom for other useful metrics and to receive a text if the site goes down.
  <H2>Communication and Collaboration</H2>
- <p>Through GitHub and comments made in this html file there is a layer created of communication and collaboration, 
+ <p> Through GitHub and comments made in this html file, there is a layer created of communication and collaboration, 
      as I am able to leave detailed comments about changes I have made or plan to make in my commits. 
      Others are then able to see this and merge their code with mine. I am able to do the same with theirs, 
      adding to the layer of collaboration this structure creates a teamwork and communication centered enviroment with progress only moving forward via 
@@ -57,7 +57,7 @@
 <H4>Links</H4>
 <table> 
     <tr>    
-        <th>Email Me</th>
+        <th>Contact Me</th>
         <th>GitHub Repository</th>
         <th>CloudWatch Dashboard</th>
         <th>CloudFront Metrics</th>
