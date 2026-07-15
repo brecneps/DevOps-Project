@@ -4,6 +4,7 @@ body {
     background-attachment: fixed;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
 }
 
 p{
@@ -34,4 +35,25 @@ H2{
     padding: 15px;
     border-radius: 10px;
     border-color: #dbb0b0;
+}
+
+table{
+    border-style: inset;
+    border-width: 2px;
+    width: 50%;
+    margin: auto;
+    padding: 15px;
+    border-radius: 10px;
+    border-color: #dbb0b0;
+    font-size: 20px;
+}
+
+H4{border-style: inset;
+    border-width: 2px;
+    width: 50%;
+    margin: auto;
+    padding: 15px;
+    border-radius: 10px;
+    border-color: #dbb0b0;
+    font-size: 20px;
 }

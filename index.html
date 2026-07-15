@@ -2,32 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="Author" content="Spencer Braden">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevOps Project</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- PLANNED POTENTIAL IMPROVEMENTS -->
+<!-- Add another webpage holding images of AWS services used and more info on how I configured everything -->
+<!-- Add cool website icon -->
+<!-- Add custom cursor to the site -->
+<!-- Upgrade AWS Account and create a domain name with Route 53 -->
  <H1>Welcome to My DevOps Project!</H1>
  <hr>
  <br>
  <br>
  <H2>Introduction</H2>
- <p>DevOps is a set of practices that combines software development (Dev) and IT operations (Ops) to shorten the development lifecycle and deliver high-quality software continuously. It emphasizes collaboration, automation, and monitoring throughout the software development process.</p>
+ <p>Hello! Welcome to my DevOps principles project, in this website that I have created I will go over the steps I took to create a CI/CD pipeline with AWS, 
+     and how it applies to the DevOps principles listed below. This is a website I have built using html and css in vscode. I have hosted it in an <a href="/images/s3 bucket capture.PNG" target="_blank">S3 Bucket</a> using an
+     <a href="/images/codebuild capture.PNG" target="_blank">AWS CodeBuild Pipeline</a> to pull its source from my <a href="https://github.com/brecneps/DevOps-Project" target="_blank">GitHub repository</a> and automatically build, test, 
+     and deploy with every push made to update the website. On top of this I have configured <a href="/images/cloudfront capture.PNG" target="_blank">CloudFront Metrics</a> as the CDN allowing users from all over the globe to reach this unique url quickly and efficiently. 
+     I have also configured some extra security alarms outside of the core security that CloudFront brings with WAF, 
+     these were configured with <a href="/images/cloudwatch capture.PNG" target="_blank">CloudWatch</a> where I have created a dashboard for these metrics.
+</p>
  <br>
  <H2>Continuous Integration</H2>
- <p>Continuous Integration (CI) is a software development practice where developers regularly merge their code changes into a central repository, after which automated builds and tests are run. The key goals of CI are to detect errors quickly, improve software quality, and reduce the time it takes to validate and release new software updates.</p>
+ <p>This website is hosted on an S3 bucket that is using an AWS CodeBuild pipeline to automatically pull its source from my GitHub repository, 
+     which builds itself using a yaml file I configured. The file sets the pipepline up for handing off the proccess to its testing phase- allowing for errors to be detected before deployment. After testing successfully then deploying automatically, 
+     this allows for continuous integration through its source of its GitHub link allowing for anything integrated, whether its features or fixes to the website to appear quickly and continuously.
+    </p>
  <br>
  <H2>Continuous Delivery</H2>
- <p>Continuous Delivery (CD) is a software development practice that ensures code changes are automatically deployed to a production environment after passing through a series of automated tests. This approach enables organizations to release software updates more frequently and reliably.</p>
- <br>
- <H2>Infrastructure as Code</H2>
- <p>Infrastructure as Code (IaC) is the practice of managing and provisioning infrastructure through code rather than through manual processes. This approach enables organizations to automate the deployment and management of their infrastructure, leading to greater consistency, reliability, and efficiency.</p>
+ <p>All code pushed into the main branch of the source GitHub repository for this website is continually delivered automatically any time there is a new push to it,
+     via the CodeBuild pipeline that is connected to the S3 bucket this site is hosted on. 
+     This creates a flow of continuous delivery for any user requesting this page. 
+     This structure allows for any feature or fix to this website to be streamlined into an efficient delivery system that allows for any release to be delivered globally,
+     through the other connected sevice of CloudFront making solving issues a quick process once the fix has been found.
+    </p> 
  <br>
  <H2>Monitoring and Logging</H2>
- <p>Monitoring and Logging are essential practices in DevOps that involve tracking and analyzing the performance and behavior of applications and systems. These practices help identify issues early, provide insights into system performance, and support troubleshooting and optimization efforts.</p>
- <br>
+ <p>This website is using CloudWatch to monitor alarms that I have configured with certain metrics such as a high request rate alarm for total request reaching over 100 in five minutes indicating a potential DDoS attempt,
+     in pair with this is a high error rate alarm, alarming only when 4xxErrors in at least 15 instances exceeds more than 20 errors within 1 hour and 15 minutes.
+     Both are connected to the S3 bucket and held on a dashboard in CloudWatch allowing for monitoring, if these are alarmed I will be sent an email through amazons SNS which then logs this in my email. 
+     This in pair is just an added protection on top of the standard CloudFront has with WAF. 
+     Another service I am using is CloudFront which is logging aspects like what devices, browsers, operating systems and locations are requesting this page. These are helpful metrics when troubleshooting on a larger scale website. I am also using a trial of Pingdom for other useful metrics and to receive a text if the site goes down.
  <H2>Communication and Collaboration</H2>
- <p>Communication and Collaboration are critical aspects of DevOps that involve fostering a culture of transparency, shared responsibility, and effective teamwork among development, operations, and other stakeholders. These practices help align goals, streamline processes, and drive continuous improvement.</p>
+ <p>Through GitHub and comments made in this html file there is a layer created of communication and collaboration, 
+     as I am able to leave detailed comments about changes I have made or plan to make in my commits. 
+     Others are then able to see this and merge their code with mine. I am able to do the same with theirs, 
+     adding to the layer of collaboration this structure creates a teamwork and communication centered enviroment with progress only moving forward via 
+     communication and collaboration as without it conflicts are created and problems emerge.
+    </p>
+<br>
+<H4>Links</H4>
+<table> 
+    <tr>    
+        <th>Email Me</th>
+        <th>GitHub Repository</th>
+        <th>CloudWatch Dashboard</th>
+        <th>CloudFront Metrics</th>
+        <th>CodeBuild Pipeline</th>
+        <th>S3 Bucket</th>
+    </tr>
+    <tr>
+        <td> <a href="mailto:spencerpbraden@gmail.com">Email Link</a> </td>
+        <td><a href="https://github.com/brecneps/DevOps-Project" target="_blank">GitHub Repository</a></td> 
+        <td><a href="/images/cloudwatch capture.PNG" target="_blank">CloudWatch Image</a></td>
+        <td><a href="/images/cloudfront capture.PNG" target="_blank">CloudFront Image</a></td>
+        <td><a href="/images/codebuild capture.PNG" target="_blank">CodeBuild Image</a></td>
+        <td><a href="/images/s3 bucket capture.PNG" target="_blank">S3 Bucket Image</a></td>
+    </tr>
+</table>
  <br>
  <br>
  <br>
