@@ -57,9 +57,13 @@ H3{border-style: inset;
     border-color: #dbb0b0;
     font-size: 20px;
 }
-figcaption{
-    font-size: 20px;
-    border-style: inset;
+figcaption{border-style: inset;
     border-width: 2px;
+    width: 90%;
+    margin: auto;
+    padding: 18px;
+    border-radius: 10px;
     border-color: #dbb0b0;
+    font-size: 20px;
+    
 }
