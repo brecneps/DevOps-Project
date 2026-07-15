@@ -67,3 +67,12 @@ figcaption{border-style: inset;
     font-size: 20px;
     
 }
+img{
+    border-style: inset;
+    border-width: 2px;
+    width: 90%;
+    margin: auto;
+    padding: 18px;
+    border-radius: 10px;
+    border-color: #dbb0b0;
+}
