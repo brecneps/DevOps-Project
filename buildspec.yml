@@ -20,7 +20,12 @@ phases:
    
     commands:
       - echo "no post-build commands neccessary"
-
+      - echo "Creating CloudFront invalidation for cloudfront staging distribution"
+      - aws cloudfront create-invalidation --distribution-id E1JQINKCKYJWKY --paths "/*"
+      - echo "Invalidation created for E1JQINKCKYJWKY (staging distribution)"
+      - echo "Creating CloudFront invalidation for cloudfront standard distribution"
+      - aws cloudfront create-invalidation --distribution-id E20DS1GI04NK08 --paths "/*"
+      - echo "Invalidation created for E20DS1GI04NK08 (standard distribution)"
 artifacts:
 
   files:
